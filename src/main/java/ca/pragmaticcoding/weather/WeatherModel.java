@@ -19,10 +19,6 @@ public class WeatherModel {
     private final ObservableList<String> cities = FXCollections.observableArrayList();
     private final StringProperty units = new SimpleStringProperty("metric");
 
-    public String getTemperature() {
-        return temperature.get();
-    }
-
     public StringProperty temperatureProperty() {
         return temperature;
     }
@@ -31,20 +27,12 @@ public class WeatherModel {
         this.temperature.set(temperature);
     }
 
-    public Image getIcon() {
-        return icon.get();
-    }
-
     public ObjectProperty<Image> iconProperty() {
         return icon;
     }
 
     public void setIcon(Image icon) {
         this.icon.set(icon);
-    }
-
-    public String getConditions() {
-        return conditions.get();
     }
 
     public StringProperty conditionsProperty() {
@@ -63,10 +51,6 @@ public class WeatherModel {
         return city;
     }
 
-    public void setCity(String city) {
-        this.city.set(city);
-    }
-
     public ObservableList<String> getCities() {
         return cities;
     }
@@ -75,15 +59,4 @@ public class WeatherModel {
         this.cities.setAll(cities);
     }
 
-    public String getUnits() {
-        return units.get();
-    }
-
-    public StringProperty unitsProperty() {
-        return units;
-    }
-
-    public void setUnits(String units) {
-        this.units.set(units);
-    }
 }
